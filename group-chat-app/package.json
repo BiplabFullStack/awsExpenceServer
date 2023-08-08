@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is my groupchat app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BiplabFullStack/Group_Chat_App.git"
+  },
+  "author": "Biplab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BiplabFullStack/Group_Chat_App/issues"
+  },
+  "homepage": "https://github.com/BiplabFullStack/Group_Chat_App#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "chalk": "^4.1.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  }
+}

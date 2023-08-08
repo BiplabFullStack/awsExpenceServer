@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="groupchat.css">
+</head>
+
+<body>
+    <h2 class="display-6" style="text-align: center;" id="group-name"></h2>
+  <div class="container chat-app">
+    
+
+    <div class="active-users">
+      <h2>Active Users</h2>
+      <ul id="user-list" class="list-group">
+      
+      </ul>
+    </div>
+    <div class="chat-window">
+       
+      <h2>Chat Window</h2>
+
+      <ul id="chat-messages" class="list-group">
+   
+      </ul>
+      <div class="input-box">
+        <input type="text" id="message-input" class="form-control" placeholder="Type your message here">
+        <button id="send-btn" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-4">
+    <div class="form-group">
+      <label for="admine">Make Admin:</label>
+      <input type="email" class="form-control" id="admine" placeholder="Enter email to admin">
+    </div>
+    <button id="create-admin-btn" class="btn btn-primary">Admin</button>
+  </div>
+  <div class="container mt-4">
+    <div class="form-group">
+      <label for="invite-username">Username to Invite:</label>
+      <input type="email" class="form-control" id="invite-username" placeholder="Enter email to invite">
+    </div>
+    <button id="invite-user-btn" class="btn btn-primary">Invite User</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="./groupchat.js"></script>
+  <script>
+
+    function storeMessageLocally(msgObj) {
+      const messages = JSON.parse(localStorage.getItem("messages")) || [];
+      messages.push(msgObj);
+      localStorage.setItem("messages", JSON.stringify(messages));
+    }
+
+    // Function to get messages from local storage
+    function getLocalMessages() {
+      return JSON.parse(localStorage.getItem("messages")) || [];
+    }
+  </script>
+</body>
+
+</html>
+
